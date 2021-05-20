@@ -1,0 +1,17 @@
+
+
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+
+[ Ubuntu 20.04 & 18.04 ] sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
+[ Ubuntu 16.04 ] sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+
+[ Ubuntu 20.04 ] curl https://packages.microsoft.com/config/ubuntu/19.10/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+[ Ubuntu 18.04 ] curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+[ Ubuntu 16.04 ] curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
+
