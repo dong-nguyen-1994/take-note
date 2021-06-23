@@ -1,10 +1,10 @@
 1. Install mysql on ubuntu
-sudo apt update
-sudo apt install mysql-server
-sudo mysql_secure_installation
-Access from cmd: mysql -u root -p
+- sudo apt update
+- sudo apt install mysql-server
+- sudo mysql_secure_installation
+- Access from cmd: mysql -u root -p
 
-Access from cmd to mssql server: sqlcmd -S localhost -U SA -P 'Your password'
+- Access from cmd to mssql server: sqlcmd -S localhost -U SA -P 'Your password'
 
 https://gist.github.com/ethanclevenger91/8134ef434ec92d3d829be0b6beb714d9
 
@@ -51,3 +51,9 @@ yes Y | sudo ACCEPT_EULA=Y apt-get install msodbcsql17
 # Restart services
 sudo service php7.4-fpm restart
 sudo service nginx restart
+
+#phpmyadmin
+Install: `https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-18-04`
+- `Include /etc/phpmyadmin/apache.conf`
+- + to the /etc/apache2/apache2.conf file and restarting the service
+- `sudo service apache2 restart`
