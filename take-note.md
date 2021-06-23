@@ -52,7 +52,7 @@ yes Y | sudo ACCEPT_EULA=Y apt-get install msodbcsql17
 sudo service php7.4-fpm restart
 sudo service nginx restart
 
-#phpmyadmin
+# phpmyadmin
 Install: `https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-18-04`
 - `Include /etc/phpmyadmin/apache.conf`
 - + to the /etc/apache2/apache2.conf file and restarting the service
